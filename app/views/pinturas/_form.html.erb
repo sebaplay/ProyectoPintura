@@ -1,0 +1,29 @@
+<%= form_for(@pintura) do |f| %>
+  <% if @pintura.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pintura.errors.count, "error") %> prohibited this pintura from being saved:</h2>
+
+      <ul>
+      <% @pintura.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :modelo %><br>
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :proveedor_id %><br>
+    <%= f.select( "proveedor_id", Proveedor.all.collect{|l| [ l.empresa, l.id ]}, {include_blank: 'Selecione Proveedor'}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

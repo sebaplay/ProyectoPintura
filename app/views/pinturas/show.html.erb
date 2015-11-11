@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @pintura.modelo %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @pintura.color %>
+</p>
+
+<p>
+  <strong>Proveedor:</strong>
+  <%= @pintura.proveedor.empresa %>
+</p>
+
+<%= link_to 'Editar', edit_pintura_path(@pintura) %> |
+<%= link_to 'Volver', pinturas_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@prov_pint) do |f| %>
+  <% if @prov_pint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prov_pint.errors.count, "error") %> prohibited this prov_pint from being saved:</h2>
+
+      <ul>
+      <% @prov_pint.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :proveedor_id %><br>
+    <%= f.select( "proveedor_id", Proveedor.all.collect{|l| [ l.empresa, l.id ]}, {include_blank: 'Selecione Proveedor'}) %>
+  </div>
+  <div class="field">
+    <%= f.label :pintura_id %><br>
+    <%= f.select( "pintura_id", Pintura.all.collect{|l| [ l.modelo, l.id ]}, {include_blank: 'Selecione Pintura'}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

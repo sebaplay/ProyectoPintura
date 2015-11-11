@@ -1,0 +1,2 @@
+module PinturasHelper
+end
