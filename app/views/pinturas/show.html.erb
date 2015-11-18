@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h2>
+      <strong>Modelo:</strong>
+      <%= @pintura.modelo %>
+      <div>
 
-<p>
-  <strong>Modelo:</strong>
-  <%= @pintura.modelo %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @pintura.color %>
-</p>
-
-<p>
+    </div>
+      </h2>
+  </div>
+  <div class="panel-footer">
+    <strong>Color:</strong>
+    <%= @pintura.color %>
+</div>
+<div class="panel-footer">
   <strong>Proveedor:</strong>
   <%= @pintura.proveedor.empresa %>
-</p>
+</div>
 
 <%= link_to 'Editar', edit_pintura_path(@pintura) %> |
 <%= link_to 'Volver', pinturas_path %>

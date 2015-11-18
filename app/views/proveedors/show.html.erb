@@ -9,23 +9,11 @@
     </div>
       </h2>
   </div>
-  <div class="panel-footer"><strong>Correo:</strong>
+  <div class="panel-footer">
+    <strong>Correo:</strong>
   <%= @proveedor.correo %></div>
 </div>
 
-  <div>
 
-<h4>Pinturas del Proveedor</h4>
-<%= @pinturas.each do |pintura| %>
-<strong>Modelo:</strong>
-<%= @pintura.modelo %>
-<strong>Color:</strong>
-<%= @pintura.color %>
-
-<br>
-  <% end %>
-  <br>
-</div>
-</div>
 <%= link_to 'Editar', edit_proveedor_path(@proveedor) %> |
 <%= link_to 'Volver', proveedors_path %>

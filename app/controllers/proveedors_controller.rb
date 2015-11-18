@@ -10,7 +10,6 @@ class ProveedorsController < ApplicationController
   # GET /proveedors/1
   # GET /proveedors/1.json
   def show
-    @pinturas = @proveedor.pintura.all
   end
 
   # GET /proveedors/new
