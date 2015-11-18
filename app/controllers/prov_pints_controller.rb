@@ -28,7 +28,7 @@ class ProvPintsController < ApplicationController
 
     respond_to do |format|
       if @prov_pint.save
-        format.html { redirect_to @prov_pint, notice: 'Prov pint was successfully created.' }
+        format.html { redirect_to @prov_pint, notice: 'Proveedor pintura agregada correctamente.' }
         format.json { render :show, status: :created, location: @prov_pint }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ProvPintsController < ApplicationController
   def update
     respond_to do |format|
       if @prov_pint.update(prov_pint_params)
-        format.html { redirect_to @prov_pint, notice: 'Prov pint was successfully updated.' }
+        format.html { redirect_to @prov_pint, notice: 'Proveedor pintura actualizado correctamente.' }
         format.json { render :show, status: :ok, location: @prov_pint }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ProvPintsController < ApplicationController
   def destroy
     @prov_pint.destroy
     respond_to do |format|
-      format.html { redirect_to prov_pints_url, notice: 'Prov pint was successfully destroyed.' }
+      format.html { redirect_to prov_pints_url, notice: 'Proveedor pintura eliminado correctamente.' }
       format.json { head :no_content }
     end
   end

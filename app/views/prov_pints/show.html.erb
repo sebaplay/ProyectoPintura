@@ -1,16 +1,18 @@
 <p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h2>
+      <strong>Proveedor:</strong>
+      <%= @prov_pint.proveedor.empresa %>
 
-
-<p>
-  <strong>Proveedor:</strong>
-  <%= @prov_pint.proveedor.empresa %>
-</p>
-
-<p>
-  <strong>Pintura:</strong>
-  <%= @prov_pint.pintura.modelo %>
-</p>
-
+      </h2>
+  </div>
+  
+  <div class="panel-body">
+    <h2>
+      <strong>Pintura:</strong>
+      <%= @prov_pint.pintura.modelo %>
+  </h2>
 
 <%= link_to 'Editar', edit_prov_pint_path(@prov_pint) %> |
 <%= link_to 'Volver', prov_pints_path %>
