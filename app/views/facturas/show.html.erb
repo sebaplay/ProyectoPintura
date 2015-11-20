@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h2>
+      <strong>Pintura:</strong>
+      <%= @factura.pintura.modelo %>
+      </h2>
+      </div>
+      <div class="panel-body">
+        <h2>
+          <strong>Proveedor:</strong>
+          <%= @factura.proveedor.empresa %>
+
+          </h2>
+      </div>
+
+  <div class="panel-footer">
+    <strong>Cantidad:</strong>
+    <%= @factura.cantidad %>
+</div>
+<div class="panel-footer">
+  <strong>Precio:</strong>
+  <%= @factura.precio %>
+</div>
+
+<%= link_to 'Editar', edit_factura_path(@factura) %> |
+<%= link_to 'Volver', facturas_path %>

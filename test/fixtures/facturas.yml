@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  precio: 1
+  cantidad: 1
   proveedor_id: 
   pintura_id: 
 
 two:
+  precio: 1
+  cantidad: 1
   proveedor_id: 
   pintura_id: 

@@ -1,6 +1,8 @@
-class CreateProvPints < ActiveRecord::Migration
+class CreateFacturas < ActiveRecord::Migration
   def change
-    create_table :prov_pints do |t|
+    create_table :facturas do |t|
+      t.integer :precio
+      t.integer :cantidad
       t.references :proveedor, index: true, foreign_key: true
       t.references :pintura, index: true, foreign_key: true
 

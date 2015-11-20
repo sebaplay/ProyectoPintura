@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :prov_pints
+  resources :facturas
   devise_for :usuarios
   resources :pinturas
   resources :proveedors

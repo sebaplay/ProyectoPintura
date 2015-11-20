@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ProvPintTest < ActiveSupport::TestCase
+class FacturaTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

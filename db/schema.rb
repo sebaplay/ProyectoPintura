@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110233818) do
+ActiveRecord::Schema.define(version: 20151119231450) do
+
+  create_table "facturas", force: :cascade do |t|
+    t.integer  "precio"
+    t.integer  "cantidad"
+    t.integer  "proveedor_id"
+    t.integer  "pintura_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "facturas", ["pintura_id"], name: "index_facturas_on_pintura_id"
+  add_index "facturas", ["proveedor_id"], name: "index_facturas_on_proveedor_id"
 
   create_table "pinturas", force: :cascade do |t|
     t.string   "modelo"
@@ -22,16 +34,6 @@ ActiveRecord::Schema.define(version: 20151110233818) do
   end
 
   add_index "pinturas", ["proveedor_id"], name: "index_pinturas_on_proveedor_id"
-
-  create_table "prov_pints", force: :cascade do |t|
-    t.integer  "proveedor_id"
-    t.integer  "pintura_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "prov_pints", ["pintura_id"], name: "index_prov_pints_on_pintura_id"
-  add_index "prov_pints", ["proveedor_id"], name: "index_prov_pints_on_proveedor_id"
 
   create_table "proveedors", force: :cascade do |t|
     t.string   "empresa"
