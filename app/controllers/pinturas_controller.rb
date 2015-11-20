@@ -1,5 +1,6 @@
 class PinturasController < ApplicationController
   before_action :set_pintura, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!, except: [:show, :index]
 
   # GET /pinturas
   # GET /pinturas.json

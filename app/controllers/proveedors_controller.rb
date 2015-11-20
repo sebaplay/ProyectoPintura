@@ -1,5 +1,6 @@
 class ProveedorsController < ApplicationController
   before_action :set_proveedor, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!, except: [:show, :index]
 
   # GET /proveedors
   # GET /proveedors.json

@@ -1,6 +1,6 @@
 class Pintura < ActiveRecord::Base
-  has_many :prov_pint
-  has_many :proveedor, :through => :prov_pint
-  
+  has_many :factura
+  has_many :proveedor, :through => :factura
+
   belongs_to :proveedor
   end
