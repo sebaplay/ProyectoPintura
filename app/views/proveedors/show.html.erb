@@ -1,16 +1,30 @@
-<p id="notice"><%= notice %></p>
+
 <div class="panel panel-default">
   <div class="panel-body">
     <h2>
       <strong>Empresa:</strong>
       <%= @proveedor.empresa %>
-      
+
       </h2>
   </div>
   <div class="panel-footer">
     <strong>Correo:</strong>
   <%= @proveedor.correo %></div>
 </div>
+
+<h4>Pinturas del Proveedor</h4>
+
+<%= @pinturas.each do |pintura| %>
+
+<div class="panel-footer">
+  <strong>Modelo:</strong>
+  <%= pintura.modelo %>
+</div>
+
+<br>
+<% end %>
+<br>
+
 
 
 <%= link_to 'Editar', edit_proveedor_path(@proveedor) %> |

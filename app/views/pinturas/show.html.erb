@@ -4,17 +4,19 @@
     <h2>
       <strong>Modelo:</strong>
       <%= @pintura.modelo %>
-    
+
       </h2>
   </div>
   <div class="panel-footer">
     <strong>Color:</strong>
     <%= @pintura.color %>
 </div>
+
 <div class="panel-footer">
-  <strong>Proveedor:</strong>
+  <strong>proveedor:</strong>
   <%= @pintura.proveedor.empresa %>
 </div>
+
 
 <%= link_to 'Editar', edit_pintura_path(@pintura) %> |
 <%= link_to 'Volver', pinturas_path %>
