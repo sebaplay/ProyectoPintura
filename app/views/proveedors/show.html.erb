@@ -14,13 +14,16 @@
 
 <h4>Pinturas del Proveedor</h4>
 
-<%= @pinturas.each do |pintura| %>
+<% @pinturas.each do |pintura| %>
 
 <div class="panel-footer">
   <strong>Modelo:</strong>
   <%= pintura.modelo %>
 </div>
-
+<div class="panel-footer">
+  <strong>Color:</strong>
+  <%= pintura.color %>
+</div>
 <br>
 <% end %>
 <br>
